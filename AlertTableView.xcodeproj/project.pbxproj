@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471A26B61DFE9A180079C475 /* 自定义UITableView.gif in Resources */ = {isa = PBXBuildFile; fileRef = 471A26B51DFE9A180079C475 /* 自定义UITableView.gif */; };
 		47E4ADD71DF6EF5A000660A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4ADD61DF6EF5A000660A7 /* main.m */; };
 		47E4ADDA1DF6EF5A000660A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4ADD91DF6EF5A000660A7 /* AppDelegate.m */; };
 		47E4ADDD1DF6EF5A000660A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4ADDC1DF6EF5A000660A7 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		471A26B51DFE9A180079C475 /* 自定义UITableView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "自定义UITableView.gif"; sourceTree = "<group>"; };
 		47E4ADD21DF6EF5A000660A7 /* AlertTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E4ADD61DF6EF5A000660A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		47E4ADD81DF6EF5A000660A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		47E4ADD41DF6EF5A000660A7 /* AlertTableView */ = {
 			isa = PBXGroup;
 			children = (
+				471A26B51DFE9A180079C475 /* 自定义UITableView.gif */,
 				47E4ADD81DF6EF5A000660A7 /* AppDelegate.h */,
 				47E4ADD91DF6EF5A000660A7 /* AppDelegate.m */,
 				47E4ADDB1DF6EF5A000660A7 /* ViewController.h */,
@@ -267,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				471A26B61DFE9A180079C475 /* 自定义UITableView.gif in Resources */,
 				47E4ADE51DF6EF5A000660A7 /* LaunchScreen.storyboard in Resources */,
 				47E4ADE21DF6EF5A000660A7 /* Assets.xcassets in Resources */,
 				47E4ADE01DF6EF5A000660A7 /* Main.storyboard in Resources */,
