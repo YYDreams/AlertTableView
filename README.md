@@ -9,8 +9,8 @@
 
 
 ####使用方法：
-1.直接将AlertViewTable拖入项目中，其次导入头文件"HHAlertTabViewController.h",进行初始化
-2.初始化时将展现的内容通过数组传入即可。
+- 1.直接将AlertViewTable拖入项目中，其次导入头文件"HHAlertTabViewController.h",进行初始化
+- 2.初始化时将展现的内容通过数组传入即可。
 
 ```
 - (void)viewDidLoad {
