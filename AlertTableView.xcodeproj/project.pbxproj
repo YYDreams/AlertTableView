@@ -15,6 +15,8 @@
 		47E4ADE51DF6EF5A000660A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E4ADE31DF6EF5A000660A7 /* LaunchScreen.storyboard */; };
 		47E4ADF01DF6EF5A000660A7 /* AlertTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4ADEF1DF6EF5A000660A7 /* AlertTableViewTests.m */; };
 		47E4ADFB1DF6EF5A000660A7 /* AlertTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4ADFA1DF6EF5A000660A7 /* AlertTableViewUITests.m */; };
+		47E4AE101DF6EFDE000660A7 /* AlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4AE0D1DF6EFDE000660A7 /* AlertCell.m */; };
+		47E4AE131DF6F0C6000660A7 /* HHAlertTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E4AE121DF6F0C6000660A7 /* HHAlertTabViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		47E4ADF61DF6EF5A000660A7 /* AlertTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E4ADFA1DF6EF5A000660A7 /* AlertTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertTableViewUITests.m; sourceTree = "<group>"; };
 		47E4ADFC1DF6EF5A000660A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E4AE0C1DF6EFDE000660A7 /* AlertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertCell.h; sourceTree = "<group>"; };
+		47E4AE0D1DF6EFDE000660A7 /* AlertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCell.m; sourceTree = "<group>"; };
+		47E4AE111DF6F0C6000660A7 /* HHAlertTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertTabViewController.h; sourceTree = "<group>"; };
+		47E4AE121DF6F0C6000660A7 /* HHAlertTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertTabViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				47E4ADD91DF6EF5A000660A7 /* AppDelegate.m */,
 				47E4ADDB1DF6EF5A000660A7 /* ViewController.h */,
 				47E4ADDC1DF6EF5A000660A7 /* ViewController.m */,
+				47E4AE081DF6EF66000660A7 /* AlertViewTable */,
 				47E4ADDE1DF6EF5A000660A7 /* Main.storyboard */,
 				47E4ADE11DF6EF5A000660A7 /* Assets.xcassets */,
 				47E4ADE31DF6EF5A000660A7 /* LaunchScreen.storyboard */,
@@ -138,6 +145,17 @@
 				47E4ADFC1DF6EF5A000660A7 /* Info.plist */,
 			);
 			path = AlertTableViewUITests;
+			sourceTree = "<group>";
+		};
+		47E4AE081DF6EF66000660A7 /* AlertViewTable */ = {
+			isa = PBXGroup;
+			children = (
+				47E4AE111DF6F0C6000660A7 /* HHAlertTabViewController.h */,
+				47E4AE121DF6F0C6000660A7 /* HHAlertTabViewController.m */,
+				47E4AE0C1DF6EFDE000660A7 /* AlertCell.h */,
+				47E4AE0D1DF6EFDE000660A7 /* AlertCell.m */,
+			);
+			name = AlertViewTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E4AE101DF6EFDE000660A7 /* AlertCell.m in Sources */,
+				47E4AE131DF6F0C6000660A7 /* HHAlertTabViewController.m in Sources */,
 				47E4ADDD1DF6EF5A000660A7 /* ViewController.m in Sources */,
 				47E4ADDA1DF6EF5A000660A7 /* AppDelegate.m in Sources */,
 				47E4ADD71DF6EF5A000660A7 /* main.m in Sources */,
@@ -429,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6AVJ5M6ED8;
 				INFOPLIST_FILE = AlertTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flower.AlertTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6AVJ5M6ED8;
 				INFOPLIST_FILE = AlertTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flower.AlertTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +538,7 @@
 				47E4AE011DF6EF5A000660A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E4AE021DF6EF5A000660A7 /* Build configuration list for PBXNativeTarget "AlertTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +547,7 @@
 				47E4AE041DF6EF5A000660A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E4AE051DF6EF5A000660A7 /* Build configuration list for PBXNativeTarget "AlertTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +556,7 @@
 				47E4AE071DF6EF5A000660A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
