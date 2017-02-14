@@ -33,28 +33,28 @@ static NSInteger const rowHeight = 44;
 #pragma mark - init
 -(instancetype)alertinitWithTitle:(NSString *)title
                       dataSoreArr:(NSArray<NSString *>*)dataArr
-                  setupAlertCellHandler:(HHsetupAlertCellHandler)alertCellHandler
+            setupAlertCellHandler:(HHsetupAlertCellHandler)alertCellHandler
                    cancelOnOnlick:(cancelOnOnlick)cancelbtn
                     finishOnClick:(finishOnClick)finishbtn{
-
+    
     
     if (self == [super initWithNibName:nil bundle:nil ]) {
         _cancelbtn = [cancelbtn copy];
         _finishbtn =[finishbtn copy];
-        self.labeltitle.text = [title copy];
+        self.labeltitle.text = title;
         _alertCellHandler =[alertCellHandler copy];
-         self.dataArr = dataArr;
+        self.dataArr = dataArr;
         
         [self.view addSubview:self.tableView];
         [self.tableView registerClass:[AlertCell class] forCellReuseIdentifier:cellID];
         
     }
     return self;
-
+    
 }
 #pragma mark - SEL Methods
 -(void)cancelOnClick:(UIButton *)btn{
-
+    
     if (self.cancelbtn) {
         self.cancelbtn(btn);
     }
@@ -113,25 +113,23 @@ static NSInteger const rowHeight = 44;
     }
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-
-    self.labeltitle =[[UILabel alloc]initWithFrame:CGRectMake(0,0,self.tableView.bounds.size.width, 0)];
-    self.labeltitle.textAlignment = NSTextAlignmentCenter;
-    self.labeltitle.text = @"提示";
     
     return self.labeltitle;
 }
 
--(CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
+
+-(CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
     
     return headerHeight;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-
+    
     return footerHeight;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-
+    
     UIView *allbtnsView =[[UIView alloc]initWithFrame:CGRectMake(10,CGRectGetMaxY(self.self.labeltitle.frame) , self.view.frame.size.width-20, 50)];
     
     allbtnsView.backgroundColor =[UIColor orangeColor];
@@ -140,7 +138,7 @@ static NSInteger const rowHeight = 44;
     cancelbtn.layer.borderColor=[UIColor grayColor].CGColor;
     cancelbtn.layer.borderWidth=0.5;
     [cancelbtn addTarget:self action:@selector(cancelOnClick:) forControlEvents:UIControlEventTouchUpInside];
-            
+    
     UIButton *finishbtn =[[UIButton alloc]initWithFrame:CGRectMake(allbtnsView.frame.size.width/2,0, allbtnsView.frame.size.width/2, 50)];
     finishbtn.layer.borderColor=[UIColor grayColor].CGColor;
     finishbtn.layer.borderWidth=0.5;
@@ -148,8 +146,8 @@ static NSInteger const rowHeight = 44;
     [finishbtn addTarget:self action:@selector(finishOnClick:) forControlEvents:UIControlEventTouchUpInside];
     [allbtnsView addSubview:cancelbtn];
     [allbtnsView addSubview:finishbtn];
-
-   return allbtnsView;
+    
+    return allbtnsView;
     
 }
 
@@ -164,7 +162,7 @@ static NSInteger const rowHeight = 44;
         self.tableView =  [[UITableView alloc]initWithFrame:CGRectMake(2 *margin, 0,self.view.bounds.size.width-4*margin ,headerHeight+rowHeight*self.dataArr.count+footerHeight) style:UITableViewStylePlain];
         self.tableView.center = self.view.center;
         self.tableView.backgroundColor =[UIColor redColor];
-        self.tableView.scrollEnabled = YES;
+        
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.layer.masksToBounds = YES;
@@ -174,4 +172,19 @@ static NSInteger const rowHeight = 44;
     }
     return _tableView;
 }
+
+- (UILabel *)labeltitle{
+    
+    if (!_labeltitle) {
+        _labeltitle =[UILabel new];
+        _labeltitle.textAlignment = NSTextAlignmentCenter;
+        
+        
+    }
+    
+    return _labeltitle;
+    
+    
+}
+
 @end
